@@ -28,8 +28,10 @@ module.exports = {
           options: {
             plugins: [
               "babel-plugin-transform-typescript-metadata",
-            ]
-          }
+              ["@babel/plugin-proposal-decorators", { "legacy": true }],
+              "@babel/plugin-transform-runtime",
+            ],
+          },
         },
       }, {
         test: /\.(jpe?g|png)$/i,
@@ -89,6 +91,9 @@ module.exports = {
         target: 'http://localhost:11000',
         changeOrigin: true,
       },
+    },
+    watchFiles: {
+      paths: ['*.ts', '*.scss', '*.css'],
     },
   },
 };

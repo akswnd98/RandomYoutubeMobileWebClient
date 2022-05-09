@@ -1,3 +1,6 @@
 [submodule "web-client-common"]
 	path = web-client-common
 	url = https://github.com/akswnd98/RandomYoutubeWebClientCommon
+[submodule "src/OwlElement"]
+	path = src/OwlElement
+	url = https://github.com/akswnd98/OwlElement
