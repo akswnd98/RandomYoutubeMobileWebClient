@@ -14,6 +14,7 @@ module.exports = {
     alias: {
       '@/src': path.resolve(__dirname, 'src'),
       '@/assets': path.resolve(__dirname, 'assets'),
+      '@/web-client-common': path.resolve(__dirname, 'web-client-common'),
     },
     extensions: ['.ts', '.js'],
   },

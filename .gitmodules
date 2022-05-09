@@ -1,0 +1,3 @@
+[submodule "web-client-common"]
+	path = web-client-common
+	url = https://github.com/akswnd98/RandomYoutubeWebClientCommon
