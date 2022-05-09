@@ -83,7 +83,12 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: path.join(__dirname, 'dist'),
+    static: [
+      {
+        directory: path.resolve(__dirname, 'assets'),
+        publicPath: '/assets',
+      },
+    ],
     port: 8080,
     historyApiFallback: true,
     proxy: {

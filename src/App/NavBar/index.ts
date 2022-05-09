@@ -4,13 +4,12 @@ import Style from '@/src/OwlElement/Attribute/Style';
 import styles from './index.scss';
 import 'reflect-metadata';
 import { inject, injectable } from 'inversify';
-import NavBar from './NavBar';
 
 export type PayloadParam = {
 } & ParentConstructorParam;
 
 @injectable()
-export default class App extends OwlElement {
+export default class NavBar extends OwlElement {
   constructor (
   ) {
     super({
@@ -24,11 +23,11 @@ export default class App extends OwlElement {
     super.initialRender(payload);
     render(
       html`
-        ${new NavBar()}
+        <img src='/assets/images/YoutubeSharingLogo.svg' />
       `,
       this.rootElement,
     );
   }
 }
 
-customElements.define('ry-app', App);
+customElements.define('nav-bar', NavBar);
