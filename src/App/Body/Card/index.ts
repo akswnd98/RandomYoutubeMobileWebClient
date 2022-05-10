@@ -8,15 +8,11 @@ import ClickHandler from './Handler/Click';
 
 export type ConstructorParam = {
   ytId: string;
-  thumbnailSrc: string;
-  thumbnailWidth: number;
-  thumbnailHeight: number;
   title: string;
 } & ParentConstructorParam;
 
 @injectable()
 export default class Card extends OwlElement {
-  thumbnailSrc: string;
   title: string;
 
   constructor (payload: ConstructorParam) {
@@ -27,7 +23,6 @@ export default class Card extends OwlElement {
       ],
       ...payload,
     });
-    this.thumbnailSrc = payload.thumbnailSrc;
     this.title = payload.title;
   }
 
@@ -35,7 +30,7 @@ export default class Card extends OwlElement {
     super.initialRender(payload);
     render(
       html`
-        <img src=${payload.thumbnailSrc} />
+        <img src=${`https://i.ytimg.com/vi/${payload.ytId}/hqdefault.jpg`} />
         <div id='text-div'>
           ${payload.title}
         </div>
