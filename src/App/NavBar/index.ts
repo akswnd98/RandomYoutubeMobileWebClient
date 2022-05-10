@@ -1,6 +1,6 @@
 import { html, render } from 'lit-html';
-import OwlElement, { ConstructorParam as ParentConstructorParam } from '@/src/OwlElement/Element';
-import Style from '@/src/OwlElement/Attribute/Style';
+import OwlElement, { ConstructorParam as ParentConstructorParam } from '@/src/owl-element/Element';
+import Style from '@/src/owl-element/Attribute/Style';
 import styles from './index.scss';
 import 'reflect-metadata';
 import { inject, injectable } from 'inversify';

@@ -4,3 +4,12 @@
 [submodule "src/OwlElement"]
 	path = src/OwlElement
 	url = https://github.com/akswnd98/OwlElement
+[submodule "src/owl-data-binding"]
+	path = src/owl-data-binding
+	url = https://github.com/akswnd98/OwlDataBinding
+[submodule "src/owl-element"]
+	path = src/owl-element
+	url = https://github.com/akswnd98/OwlElement
+[submodule "src/common"]
+	path = src/common
+	url = https://github.com/akswnd98/RandomYoutubeCommon

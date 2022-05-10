@@ -1,0 +1,15 @@
+#root {
+  width: 360px;
+  height: 280px;
+  img {
+    width: 100%;
+    height: 200px;
+  }
+  #text-div {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+}
