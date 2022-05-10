@@ -4,7 +4,6 @@ import Style from '@/src/owl-element/Attribute/Style';
 import styles from './index.scss';
 import 'reflect-metadata';
 import { inject, injectable } from 'inversify';
-import AppendNotifier from '@/src/data-binding/YoutubeIds/Notifier/Append';
 
 export type PayloadParam = {
 } & ParentConstructorParam;

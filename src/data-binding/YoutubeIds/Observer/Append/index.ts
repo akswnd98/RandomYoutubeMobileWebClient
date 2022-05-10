@@ -22,9 +22,14 @@ export default class Append implements IObserver {
   }
 
   async getVideoMetadata (id: string) {
-    const metadata = (await axios.get(`http://noembed.com/embed?url=${encodeURIComponent(`http://www.youtube.com/watch?v=${id}`)}`)).data;
+    const metadata = (await axios.get(`https://www.youtube.com/oembed?url=${encodeURIComponent(`http://www.youtube.com/watch?v=${id}`)}`)).data;
     return {
       title: metadata.title,
+      authorName: metadata.author_name,
+      authorUrl: metadata.author_url,
+      thumbnailUrl: metadata.thumbnail_url,
+      thumbnailWidth: metadata.thumbnail_width,
+      thumbnailHeight: metadata.thumbnail_height,
     };
   }
 }
