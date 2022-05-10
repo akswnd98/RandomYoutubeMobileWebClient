@@ -1,10 +1,12 @@
 import Handler, { ConstructorParam as ParentConstructorParam } from '@/src/owl-element/Attribute/Handler';
+import { injectable } from 'inversify';
 import Card from '..';
 
 export type ConstructorParam = {
   ytId: string;
 };
 
+@injectable()
 export default class Click extends Handler<'click'> {
   eventName: 'click' = 'click';
   ytId: string;

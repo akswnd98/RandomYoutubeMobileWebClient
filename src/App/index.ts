@@ -7,6 +7,7 @@ import { inject, injectable } from 'inversify';
 import NavBar from './NavBar';
 import Body from './Body';
 import { SYMBOLS } from '../symbols';
+import ScrollHandler from './Handler/Scroll';
 
 export type PayloadParam = {
   body: Body;
@@ -20,6 +21,7 @@ export default class App extends OwlElement {
     super({
       attributes: [
         new Style({ styles: styles.toString() }),
+        new ScrollHandler({}),
       ],
       body,
     } as PayloadParam);
