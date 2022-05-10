@@ -12,7 +12,10 @@ import { injectable } from 'inversify';
 export default class Append implements IObserver {
   async update (subject: AppendNotifier, event: EventType) {
     const body = InversifyStatic.instance.get<AppBody>(SYMBOLS.AppBody);
-    const cards = await Promise.all(event.newIds.map(async (v) => new Card(await this.getVideoMetadata(v))));
+    const cards = await Promise.all(event.newIds.map(async (v) => new Card({
+      ...await this.getVideoMetadata(v),
+      ytId: v,
+    })));
     cards.forEach((v) => {
       body.rootElement.appendChild(v);
     });

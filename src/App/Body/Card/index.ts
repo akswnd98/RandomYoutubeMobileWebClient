@@ -4,8 +4,10 @@ import { injectable } from 'inversify';
 import { render, html } from 'lit-html';
 import Style from '@/src/owl-element/Attribute/Style';
 import styles from './index.scss';
+import ClickHandler from './Handler/Click';
 
 export type ConstructorParam = {
+  ytId: string;
   thumbnailSrc: string;
   thumbnailWidth: number;
   thumbnailHeight: number;
@@ -19,7 +21,10 @@ export default class Card extends OwlElement {
 
   constructor (payload: ConstructorParam) {
     super({
-      attributes: [ new Style({ styles: styles.toString() }) ],
+      attributes: [
+        new Style({ styles: styles.toString() }),
+        new ClickHandler({ ytId: payload.ytId }),
+      ],
       ...payload,
     });
     this.thumbnailSrc = payload.thumbnailSrc;
