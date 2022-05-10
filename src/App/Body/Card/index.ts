@@ -5,6 +5,7 @@ import { render, html } from 'lit-html';
 import Style from '@/src/owl-element/Attribute/Style';
 import styles from './index.scss';
 import ClickHandler from './Handler/Click';
+import Bottom from './Bottom';
 
 export type ConstructorParam = {
   ytId: string;
@@ -34,7 +35,12 @@ export default class Card extends OwlElement {
       html`
         <img src=${payload.thumbnailUrl} />
         <div id='text-div'>
-          ${payload.title}
+          ${new Bottom({
+            ytId: payload.ytId,
+            title: payload.title,
+            authorName: payload.authorName,
+            authorUrl: payload.authorUrl,
+          })}
         </div>
       `,
       this.rootElement,

@@ -11,8 +11,8 @@
   #text-div {
     width: 100%;
     height: 80px;
-    display: flex;
-    align-items: center;
-    text-align: center;
+  }
+  &:hover {
+    cursor: pointer;
   }
 }
