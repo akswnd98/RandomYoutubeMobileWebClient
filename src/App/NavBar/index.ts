@@ -4,6 +4,7 @@ import Style from '@/src/owl-element/Attribute/Style';
 import styles from './index.scss';
 import 'reflect-metadata';
 import { inject, injectable } from 'inversify';
+import randomYoutubeLogo from '@/assets/images/RandomYoutubeLogo.svg';
 
 export type PayloadParam = {
 } & ParentConstructorParam;
@@ -23,7 +24,7 @@ export default class NavBar extends OwlElement {
     super.initialRender(payload);
     render(
       html`
-        <img src='/assets/images/YoutubeSharingLogo.svg' />
+        <img src=${randomYoutubeLogo} />
       `,
       this.rootElement,
     );
