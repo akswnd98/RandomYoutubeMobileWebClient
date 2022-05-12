@@ -33,7 +33,9 @@ export default class Card extends OwlElement {
     super.initialRender(payload);
     render(
       html`
-        <img src=${payload.thumbnailUrl} />
+        <div id='wrapper'>
+          <img src=${payload.thumbnailUrl} />
+        </div>
         <div id='text-div'>
           ${new Bottom({
             ytId: payload.ytId,
