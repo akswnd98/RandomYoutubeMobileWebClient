@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx webpack serve --mode=development"
+    "dev": "npx webpack serve --mode=development",
+    "build": "npx webpack --mode=production"
   },
   "repository": {
     "type": "git",
